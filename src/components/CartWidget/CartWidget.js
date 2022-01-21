@@ -1,14 +1,13 @@
 import { BsCart } from "react-icons/bs";
 import Badge from "react-bootstrap/Badge";
 import { useContext } from "react";
-//import { CartContext } from "../../context/CartContext";
+import { CartContext } from "../../context/CartContext";
 
 const CartWidget = () => {
 
-    //const {cartList} = useContext(CartContext)   
+    const {cartList} = useContext(CartContext)   
     
-    //const total =  cartList.length ? cartList.map(obj => obj.quantity).reduce((a,b) => a + b) : '' 
-    const total=0
+    const total =  cartList.length ? cartList.map(obj => obj.quantity).reduce((a,b) => a + b) : '' 
 
     return (
         <div>
@@ -16,4 +15,5 @@ const CartWidget = () => {
         </div>
     )
 }
+
 export default CartWidget
